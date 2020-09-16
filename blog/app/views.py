@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Post
+from .models import Post, Contact
 
 # Create your views here.
 def index(request):
@@ -25,3 +25,15 @@ def postDetail(request, id):
         'post': post
     }
     return render(request, 'postDetail.html', data)
+
+def form(request):
+    name = request.POST['name']
+    Contact.objects.create(
+        name = name,
+        email = request.POST['email'],
+        message = request.POST['message']
+    )
+    data = {
+        'name': name
+    }
+    return render(request, 'contato.html', data)

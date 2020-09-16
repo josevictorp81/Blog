@@ -15,11 +15,20 @@ class Post(models.Model):
         default = Category.GR
     )
     deleted = models.BooleanField(default=True)
+    image = models.ImageField(upload_to='posts', null=True, blank=True)
 
     def get_category_label(self):
         return self.get_categories_display()
 
     def __str__(self):
         return self.title
+
+class Contact(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name
 
 

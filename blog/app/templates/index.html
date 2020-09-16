@@ -43,7 +43,11 @@
 						<div class="row">
 							{% for p in post %}
 							<article class="col-6 col-12-xsmall work-item">
+								{% if p.image %}
+								<a href="{{ p.image.url }}" class="image fit thumb"><img src="{{ p.image.url }}" alt=""/></a>
+								{% else %}
 								<a href="{% static 'images/fulls/01.jpg' %}" class="image fit thumb"><img src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
+								{% endif %}
 								<h3>{{ p.title }}</h3>
 								<p>{{ p.subTitle }}</p>
 								<span>{{ p.categories }}</span>
@@ -64,16 +68,17 @@
 						<p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="#">
+								<form method="post" action="{% url 'form' %}">
+									{% csrf_token %}
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">

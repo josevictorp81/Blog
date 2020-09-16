@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post
+from .models import Post, Contact
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
@@ -9,4 +9,8 @@ class PostAdmin(admin.ModelAdmin):
 
     #def get_queryset(self, request):
     #    return Post.objects.filter(deleted=True)
+
+@admin.register(Contact)
+class ContactForm(admin.ModelAdmin):
+    list_display = ['name', 'email',]
     
