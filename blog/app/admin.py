@@ -12,5 +12,6 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Contact)
 class ContactForm(admin.ModelAdmin):
-    list_display = ['name', 'email',]
+    list_display = ['name', 'email']
+    search_fields = ['name', 'email']
     
