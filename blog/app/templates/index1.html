@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <ol>
+    {% for i in lista %}
+        {% if i == 'python' %}
+        <b><li>{{ i }}</li></b> 
+        {% else %}
+        <li>{{ i }}</li>
+        {% endif %}
+    {% endfor %}
+    </ol>
+
+    <br>
+
+    {% for p in post %}
+        <h2>{{ p.title }}</h2>
+        <h3>{{ p.subTitle }}</h3>
+        <p>{{ p.content }}</p>
+    {% endfor %}
+    
+
+</body>
+</html>
