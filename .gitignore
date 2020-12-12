@@ -1,0 +1,11 @@
+.env
+.venv
+.ENV
+.VENV
+env
+venv
+ENV
+VENV
+.vscode
+__pycache__
+*.pyc
