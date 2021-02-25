@@ -1,6 +1,4 @@
 # Blog
-Blog
-
 Página inicial mostrando os posts.
 ![posts](https://github.com/josevictorp81/Blog/blob/master/imagens/blog-inicio.png)
 
