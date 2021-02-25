@@ -7,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title>Curso de Django</title>
+		<title>Blog</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
@@ -33,7 +33,7 @@
 						</header>
 						<p>Beginner in backend programming with django. Student of the Bachelor's Degree in Computer Science at the State University of Piaui. Currently attending the 7th period.</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><a href="" class="button">Ler mais</a></li>
 						</ul>
 					</section>
 
@@ -52,7 +52,7 @@
 								<p>{{ p.subTitle }}</p>
 								<span>{{ p.categories }}</span>
 								<ul class="actions">
-									<li><a href="{% url 'postDetail' p.id %}" class="button">Read More</a></li>
+									<li><a href="{% url 'postDetail' p.id %}" class="button">Ler mais</a></li>
 								</ul>
 							</article>
 							{% endfor %}

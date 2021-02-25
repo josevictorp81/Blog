@@ -32,10 +32,10 @@
                             <h2>{{ post.title }}</h2>
                             <h4>{{ post.subTitle }}</h4>
 						</header>
+						<img src="{{ post.image.url }}" alt="" width="300" height="255">
 						<p>{{ post.content }}</p>
-						<img src="{{ post.image.url }}" alt="">
 						<ul class="actions">
-							<li><a href="{% url 'index' %}" class="button">Back</a></li>
+							<li><a href="{% url 'index' %}" class="button">Voltar</a></li>
 						</ul>
 					</section>
 			</div>
@@ -45,7 +45,7 @@
 				<div class="inner">
 					<ul class="icons">
 						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/josevictorp81/" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+						<li><a href="" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
 						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
