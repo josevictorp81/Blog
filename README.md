@@ -2,10 +2,10 @@
 Blog
 
 Página inicial mostrando os posts.
-![posts]()
+![posts](https://github.com/josevictorp81/Blog/blob/master/imagens/blog-inicio.png)
 
 Página mostrando os detalhes completo do post.
-![detalhes]()
+![detalhes](https://github.com/josevictorp81/Blog/blob/master/imagens/blog-detalhes.png)
 
 # Tecnologias
 * [Django](https://www.djangoproject.com/)
